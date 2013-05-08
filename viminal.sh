@@ -23,7 +23,7 @@ then
   # linux / osx 
   tmp_file='viminal.tmp'
   echo 'appending pathogen#infect() to .vimrc'
-  echo 'pathogen#infect()' > $tmp_file 
+  echo 'execute pathogen#infect()' > $tmp_file 
   cat $vimrc_file >> $tmp_file
   mv $tmp_file $vimrc_file
 fi
