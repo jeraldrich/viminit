@@ -71,3 +71,26 @@ else
   echo $ctrlp_dir" already exists."
 fi
 
+# install ack.vim
+ackvim_dir=$HOME"/.vim/bundle/ack.vim"
+if [ ! -d $ackvim_dir ];
+then
+  if ! which ack > /dev/null; then
+    echo 'Unable to install the ack.vim plugin. ack must be installed. see this page for more info https://github.com/mileszs/ack.vim'
+  else
+    echo $ackvim_dir" does not exist. Installing..."
+    git clone https://github.com/mileszs/ack.vim.git $ackvim_dir
+  fi
+fi
+
+# install nerdtree-ack
+nerdtreeack_dir=$HOME"/.vim/bundle/nerdtree-ack"
+if [ ! -d $nerdtreeack_dir ];
+then
+  if ! which ack > /dev/null; then
+    echo 'Unable to install the nerdtree-ack.vim plugin. ack must be installed. see this page for more info https://github.com/mileszs/ack.vim'
+  else
+    echo $nerdtreeack_dir" does not exist. Installing..."
+    git clone git://github.com/tyok/nerdtree-ack.git $nerdtreeack_dir
+  fi
+fi
