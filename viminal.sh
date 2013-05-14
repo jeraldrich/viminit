@@ -1,3 +1,11 @@
+# make sure .vim directory exists
+vim_dir=$HOME"/.vim"
+if [ ! -d $vim_dir ];
+then
+  echo $vim_dir" does not exist. Please install VIM before installing Viminal."
+  exit 0
+fi
+
 # install pathogen
 mkdir -p "~/.vim/autoload ~/.vim/bundle"
 pathogen_file=$HOME"/.vim/autoload/pathogen.vim"
@@ -26,4 +34,12 @@ then
   echo 'execute pathogen#infect()' > $tmp_file 
   cat $vimrc_file >> $tmp_file
   mv $tmp_file $vimrc_file
+fi
+
+# install NERDTree
+bundle_dir=$HOME"/.vim/bundle"
+if [ ! -d $bundle_dir ];
+then
+  echo $bundle_dir" does not exist. Something terrible has happened."
+  exit 0
 fi
