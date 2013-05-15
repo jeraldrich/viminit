@@ -81,16 +81,16 @@ then
     echo $ackvim_dir" does not exist. Installing..."
     git clone https://github.com/mileszs/ack.vim.git $ackvim_dir
   fi
+else
+  echo $ackvim_dir" already exists."
 fi
 
-# install nerdtree-ack
-nerdtreeack_dir=$HOME"/.vim/bundle/nerdtree-ack"
-if [ ! -d $nerdtreeack_dir ];
+# install vim-surround
+vimsurround_dir=$HOME"/.vim/bundle/vim-surround"
+if [ ! -d $vimsurround_dir ];
 then
-  if ! which ack > /dev/null; then
-    echo 'Unable to install the nerdtree-ack.vim plugin. ack must be installed. see this page for more info https://github.com/mileszs/ack.vim'
-  else
-    echo $nerdtreeack_dir" does not exist. Installing..."
-    git clone git://github.com/tyok/nerdtree-ack.git $nerdtreeack_dir
-  fi
+  echo $vimsurround_dir" does not exist. Installing..."
+  git clone git://github.com/tpope/vim-surround.git $vimsurround_dir
+else
+  echo $vimsurround_dir" already exists."
 fi
