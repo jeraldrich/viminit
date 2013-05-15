@@ -23,24 +23,29 @@ else
   echo 'Pathogen already installed'
 fi
 
+function modify_vimrc() 
+{
+  vimrc_file=$HOME"/.vimrc"
+  if [ ! -f $vimrc_file ];
+  then
+    touch $vimrc_file
+  fi
+  if ! grep -qx "$1" $vimrc_file;
+  then
+    # creating a tmp file is necessary in order to prepend to .vimrc
+    # without using sed or ed, which both function differently between 
+    # linux / osx 
+    tmp_file='viminal.tmp'
+    echo 'prepending '$1' to .vimrc'
+    echo $1 > $tmp_file
+    cat $vimrc_file >> $tmp_file
+    mv $tmp_file $vimrc_file
+  fi
+}
 # modify vimrc to run pathogen on vim startup
-vimrc_file=$HOME"/.vimrc"
-if [ ! -f $vimrc_file ];
-then
-  touch $vimrc_file
-fi
-if ! grep -qx 'execute pathogen#infect()' $vimrc_file;
-then
-  echo 'Inserting pathogen into ~/.vimrc file...'
-  # creating a tmp file is necessary in order to prepend to .vimrc
-  # without using sed or ed, which both function differently between 
-  # linux / osx 
-  tmp_file='viminal.tmp'
-  echo 'appending pathogen#infect() to .vimrc'
-  echo 'execute pathogen#infect()' > $tmp_file 
-  cat $vimrc_file >> $tmp_file
-  mv $tmp_file $vimrc_file
-fi
+modify_vimrc "execute pathogen#infect()"
+# set sensible .vimrc settings like set number, show match ect
+modify_vimrc "syntax on" "set filetype plugin indent on" "set number" "set showmatch"
 
 ## install plugins ##
 
@@ -93,4 +98,14 @@ then
   git clone git://github.com/tpope/vim-surround.git $vimsurround_dir
 else
   echo $vimsurround_dir" already exists."
+fi
+
+# install delimitMate
+delimitMate_dir=$HOME"/.vim/bundle/delimitMate"
+if [ ! -d $delimitMate_dir ];
+then
+  echo $delimitMate_dir" does not exist. Installing..."
+  git clone git://github.com/Raimondi/delimitMate.git $delimitMate_dir
+else
+  echo $delimitMate_dir" already exists."
 fi
