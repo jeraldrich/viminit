@@ -7,5 +7,5 @@ Viminal is a simple script that provides a VIM environment with a navigation men
 
 
 ```bash
-$ curl -Lo- https://bit.ly/janus-bootstrap | bash
+$ curl -Lo- https://raw.github.com/jeraldrich/viminal/master/viminal.sh | bash
 ```
