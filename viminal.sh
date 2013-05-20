@@ -43,15 +43,15 @@ function modify_vimrc()
     mv $tmp_file $vimrc_file
   fi
 }
-# modify vimrc to run pathogen on vim startup
-modify_vimrc "execute pathogen#infect()"
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on" 
-modify_vimrc "set filetype plugin indent on" 
+modify_vimrc "set filetype plugin on" 
 modify_vimrc "set number"
 modify_vimrc "set showmatch"
 modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
+# modify vimrc to run pathogen on vim startup
+modify_vimrc "execute pathogen#infect()"
 
 ## install plugins ##
 
