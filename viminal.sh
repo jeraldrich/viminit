@@ -48,8 +48,8 @@ modify_vimrc "syntax on"
 modify_vimrc "set number"
 modify_vimrc "set showmatch"
 # start nerdtree and reset focus from nerdtree to open file
-modify_vimrc "autocmd VimEnter \* NERDTree"
-modify_vimrc "autocmd VimEnter \* wincmd l"
+modify_vimrc 'autocmd VimEnter * NERDTree'
+modify_vimrc 'autocmd VimEnter * wincmd l'
 # use git for backups.. 
 modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
