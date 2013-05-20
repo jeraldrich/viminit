@@ -47,6 +47,7 @@ function modify_vimrc()
 modify_vimrc "syntax on" 
 modify_vimrc "set number"
 modify_vimrc "set showmatch"
+# use git for backups.. 
 modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
 # modify vimrc to run pathogen on vim startup
