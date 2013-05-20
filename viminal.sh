@@ -45,7 +45,6 @@ function modify_vimrc()
 }
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on" 
-modify_vimrc "set filetype plugin on" 
 modify_vimrc "set number"
 modify_vimrc "set showmatch"
 modify_vimrc "set nobackup"
