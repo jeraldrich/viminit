@@ -37,7 +37,7 @@ function modify_vimrc()
     # without using sed or ed, which both function differently between 
     # linux / osx 
     tmp_file='viminal.tmp'
-    echo 'prepending '$1' to .vimrc'
+    echo 'prepending '"$1"' to .vimrc'
     echo "$1" > $tmp_file
     cat $vimrc_file >> $tmp_file
     mv $tmp_file $vimrc_file
