@@ -2,8 +2,8 @@
 vim_dir=$HOME"/.vim"
 if [ ! -d $vim_dir ];
 then
-  echo $vim_dir" does not exist. Please install VIM before installing Viminal."
-  exit 0
+  echo $vim_dir" does not exist. Creating .vim directory..."
+  mkdir ~/.vim
 fi
 # make sure git is installed
 if ! which git > /dev/null; then
@@ -12,7 +12,8 @@ if ! which git > /dev/null; then
 fi
 
 # install pathogen
-mkdir -p "~/.vim/autoload ~/.vim/bundle"
+mkdir -p ~/.vim/autoload
+mkdir -p ~/.vim/bundle
 pathogen_file=$HOME"/.vim/autoload/pathogen.vim"
 if [ ! -e $pathogen_file ];
 then 
