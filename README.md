@@ -1,7 +1,7 @@
 # Viminal
 =======
 
-Viminal is a simple script that provides a VIM environment with a navigation menu and fuzzy search similar to Textmate's navigation menu and find in project features. 
+Viminal is a simple script that provides a VIM environment with a navigation menu, fuzzy search and auto tag close features similar to Textmate. 
 
 ## Installation
 
