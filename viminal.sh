@@ -38,7 +38,7 @@ function modify_vimrc()
     # linux / osx 
     tmp_file='viminal.tmp'
     echo 'prepending ''$1'' to .vimrc'
-    echo '$1' > $tmp_file
+    echo "$1" > $tmp_file
     cat $vimrc_file >> $tmp_file
     mv $tmp_file $vimrc_file
   fi
@@ -48,8 +48,8 @@ modify_vimrc "syntax on"
 modify_vimrc "set number"
 modify_vimrc "set showmatch"
 # start nerdtree and reset focus from nerdtree to open file
-modify_vimrc 'autocmd VimEnter * NERDTree'
 modify_vimrc 'autocmd VimEnter * wincmd l'
+modify_vimrc 'autocmd VimEnter * NERDTree'
 # use git for backups.. 
 modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
