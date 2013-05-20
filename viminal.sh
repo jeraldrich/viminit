@@ -81,6 +81,26 @@ else
   echo $nerdtree_tabs_dir" already exists."
 fi
 
+# install vim-surround
+vimsurround_dir=$HOME"/.vim/bundle/vim-surround"
+if [ ! -d $vimsurround_dir ];
+then
+  echo $vimsurround_dir" does not exist. Installing..."
+  git clone git://github.com/tpope/vim-surround.git $vimsurround_dir
+else
+  echo $vimsurround_dir" already exists."
+fi
+
+# install delimitMate
+delimitMate_dir=$HOME"/.vim/bundle/delimitMate"
+if [ ! -d $delimitMate_dir ];
+then
+  echo $delimitMate_dir" does not exist. Installing..."
+  git clone git://github.com/Raimondi/delimitMate.git $delimitMate_dir
+else
+  echo $delimitMate_dir" already exists."
+fi
+
 # install ctrlp
 ctrlp_dir=$HOME"/.vim/bundle/ctrlp"
 if [ ! -d $ctrlp_dir ];
@@ -103,24 +123,4 @@ then
   fi
 else
   echo $ackvim_dir" already exists."
-fi
-
-# install vim-surround
-vimsurround_dir=$HOME"/.vim/bundle/vim-surround"
-if [ ! -d $vimsurround_dir ];
-then
-  echo $vimsurround_dir" does not exist. Installing..."
-  git clone git://github.com/tpope/vim-surround.git $vimsurround_dir
-else
-  echo $vimsurround_dir" already exists."
-fi
-
-# install delimitMate
-delimitMate_dir=$HOME"/.vim/bundle/delimitMate"
-if [ ! -d $delimitMate_dir ];
-then
-  echo $delimitMate_dir" does not exist. Installing..."
-  git clone git://github.com/Raimondi/delimitMate.git $delimitMate_dir
-else
-  echo $delimitMate_dir" already exists."
 fi
