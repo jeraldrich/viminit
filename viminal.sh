@@ -31,30 +31,38 @@ function modify_vimrc()
   then
     touch $vimrc_file
   fi
-  if ! grep -qx "$1" $vimrc_file;
+  if ! grep -qFx "$1" $vimrc_file;
   then
     # creating a tmp file is necessary in order to prepend to .vimrc
     # without using sed or ed, which both function differently between 
     # linux / osx 
     tmp_file='viminal.tmp'
-    echo 'prepending '"$1"' to .vimrc'
-    echo "$1" > $tmp_file
-    cat $vimrc_file >> $tmp_file
-    mv $tmp_file $vimrc_file
+    if [ "$2" == "prepend" ];
+    then
+      echo "prepending "$1" to .vimrc"
+      echo "$1" > $tmp_file
+      cat $vimrc_file >> $tmp_file
+      mv $tmp_file $vimrc_file
+    else
+      echo "appending "$1" to .vimrc"
+      echo "$1" > $tmp_file
+      cat $tmp_file >> $vimrc_file
+      rm $tmp_file
+    fi
   fi
 }
+# modify vimrc to run pathogen on vim startup
+modify_vimrc "execute pathogen#infect()" "prepend"
+# start nerdtree and reset focus from nerdtree to open file
+modify_vimrc 'autocmd VimEnter * NERDTree'
+modify_vimrc 'autocmd VimEnter * wincmd l'
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on" 
 modify_vimrc "set number"
 modify_vimrc "set showmatch"
-# start nerdtree and reset focus from nerdtree to open file
-modify_vimrc 'autocmd VimEnter * wincmd l'
-modify_vimrc 'autocmd VimEnter * NERDTree'
 # use git for backups.. 
 modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
-# modify vimrc to run pathogen on vim startup
-modify_vimrc "execute pathogen#infect()"
 
 ## install plugins ##
 
