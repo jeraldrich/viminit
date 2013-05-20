@@ -66,6 +66,16 @@ else
   echo $nerdtree_dir" already exists."
 fi
 
+# install NERDTree tabs. Generally makes nerdtree function better
+nerdtree_tabs_dir=$HOME"/.vim/bundle/nerdtree_tabs"
+if [ ! -d $nerdtree_tabs_dir ];
+then
+  echo $nerdtree_tabs_dir" does not exist. Installing..."
+  git clone https://github.com/jistr/vim-nerdtree-tabs.git $nerdtree_tabs_dir
+else
+  echo $nerdtree_tabs_dir" already exists."
+fi
+
 # install ctrlp
 ctrlp_dir=$HOME"/.vim/bundle/ctrlp"
 if [ ! -d $ctrlp_dir ];
