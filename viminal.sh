@@ -31,13 +31,13 @@ function modify_vimrc()
   then
     touch $vimrc_file
   fi
-  if ! grep -qx '$1' $vimrc_file;
+  if ! grep -qx "$1" $vimrc_file;
   then
     # creating a tmp file is necessary in order to prepend to .vimrc
     # without using sed or ed, which both function differently between 
     # linux / osx 
     tmp_file='viminal.tmp'
-    echo 'prepending ''$1'' to .vimrc'
+    echo 'prepending '$1' to .vimrc'
     echo "$1" > $tmp_file
     cat $vimrc_file >> $tmp_file
     mv $tmp_file $vimrc_file
