@@ -1,4 +1,11 @@
-viminal
+# Viminal
 =======
 
-Viminal is a simple script that installs the very basic amount of plugins required for a functional VIM environment that includes a file navigation menu similar to Textmate's and a fuzzy filename search similar to Textmate's find in project feature 
+Viminal is a simple script that provides a VIM environment with a navigation menu and fuzzy search similar to Textmate's navigation menu and find in project features. 
+
+## Installation
+
+
+```bash
+$ curl -Lo- https://bit.ly/janus-bootstrap | bash
+```
