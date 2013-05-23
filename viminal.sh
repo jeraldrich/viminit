@@ -60,6 +60,7 @@ modify_vimrc 'autocmd VimEnter * wincmd l'
 modify_vimrc "syntax on" 
 modify_vimrc "set number"
 modify_vimrc "set showmatch"
+modify_vimrc "filetype plugin on"
 # use git for backups.. 
 modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
@@ -91,6 +92,16 @@ then
   git clone https://github.com/jistr/vim-nerdtree-tabs.git $nerdtree_tabs_dir
 else
   echo $nerdtree_tabs_dir" already exists."
+fi
+
+# install NERDcommenter. Makes mass comment changes much easier
+nerdcommenter_dir=$HOME"/.vim/bundle/nerdcommenter_dir"
+if [ ! -d $nerdcommenter_dir ];
+then
+  echo $nerdcommenter_dir" does not exist. Installing..."
+  git clone https://github.com/scrooloose/nerdcommenter.git $nerdcommenter_dir
+else
+  echo $nerdcommenter_dir" already exists."
 fi
 
 # install vim-surround
