@@ -56,11 +56,31 @@ modify_vimrc "execute pathogen#infect()" "prepend"
 # start nerdtree and reset focus from nerdtree to open file
 modify_vimrc 'autocmd VimEnter * NERDTree'
 modify_vimrc 'autocmd VimEnter * wincmd l'
+# expand tab if python file
+modify_vimrc 'autocmd filetype python set expandtab'
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on" 
+# always show line numbers
 modify_vimrc "set number"
+# insert tabs on the start of a line according to shiftwidth not tabstop
+modify_vimrc "set smarttab"
+# highlight search terms
+modify_vimrc "set hlsearch"
+# show search matches as you type"
+modify_vimrc "set incsearch"
+# show matching parenthesis
 modify_vimrc "set showmatch"
 modify_vimrc "filetype plugin on"
+# autoindent on newlines
+modify_vimrc "set autoindent"
+# ignore case if search pattern is all lowercase
+modify_vimrc "set smartcase"
+# change terminal title
+modify_vimrc "set title"
+# remember more commands and search history
+modify_vimrc "set history=1000"
+# remember more undos
+modify_vimrc "set undolevels=1000"
 # use git for backups.. 
 modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
