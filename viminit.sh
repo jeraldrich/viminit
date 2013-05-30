@@ -62,6 +62,10 @@ modify_vimrc 'autocmd filetype python set expandtab'
 modify_vimrc "syntax on" 
 # always show line numbers
 modify_vimrc "set number"
+# four-space tab indent
+modify_vimrc "set tabstop=4"
+# shift < > keys to 4
+modify_vimrc "set shiftwidth=4"
 # insert tabs on the start of a line according to shiftwidth not tabstop
 modify_vimrc "set smarttab"
 # highlight search terms
