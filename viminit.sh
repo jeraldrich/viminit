@@ -58,6 +58,8 @@ modify_vimrc 'autocmd VimEnter * NERDTree'
 modify_vimrc 'autocmd VimEnter * wincmd l'
 # expand tab if python file
 modify_vimrc 'autocmd filetype python set expandtab'
+# smartindent if python. example if True: <enter> new line will be tab by tabstop num
+modify_vimrc 'autocmd filetype python set smartindent'
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on" 
 # always show line numbers
