@@ -87,6 +87,9 @@ modify_vimrc "set title"
 modify_vimrc "set history=1000"
 # remember more undos
 modify_vimrc "set undolevels=1000"
+# don't beep
+modify_vimrc "set visualbell"
+modify_vimrc "set noerrorbells"
 # use git for backups.. 
 modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
