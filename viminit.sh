@@ -60,6 +60,8 @@ modify_vimrc 'autocmd VimEnter * wincmd l'
 modify_vimrc 'autocmd filetype python set expandtab'
 # smartindent if python. example if True: <enter> new line will be tab by tabstop num
 modify_vimrc 'autocmd filetype python set smartindent'
+# pep8 width
+modify_vimrc 'autocmd filetype python set textwidth=80'
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on" 
 # always show line numbers
@@ -93,6 +95,19 @@ modify_vimrc "set noerrorbells"
 # use git for backups.. 
 modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
+
+## create indent dir and indent files 
+# these are used to set indent settings per filetype 
+mkdir -p ~/.vim/indent
+python_indent_file=$HOME"/.vim/indent/python.vim"
+if [ ! -e $python_indent_file ];
+then 
+  echo 'Installing Python indent file'
+  curl "http://www.vim.org/scripts/download_script.php?src_id=4316" \
+        > $HOME"/.vim/indent/python.vim"
+else
+  echo 'Python indent file already installed'
+fi
 
 ## install plugins ##
 
