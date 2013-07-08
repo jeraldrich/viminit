@@ -103,6 +103,9 @@ modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*"
 # NERDTree configuration
 modify_vimrc "let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']"
 modify_vimrc "map <Leader>n :NERDTreeTabsToggle<CR>"
+# Easygrep config
+modify_vimrc "let g:EasyGrepRecursive = 1"
+modify_vimrc "let g:EasyGrepFilesToExclude = '*.pyc,*.rbc'"
 
 ## create indent dir and indent files 
 # these are used to set indent settings per filetype 
