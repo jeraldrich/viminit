@@ -60,10 +60,12 @@ modify_vimrc 'autocmd VimEnter * wincmd l'
 modify_vimrc 'autocmd filetype python set expandtab'
 # smartindent if python. example if True: <enter> new line will be tab by tabstop num
 modify_vimrc 'autocmd filetype python set smartindent'
-# pep8 width
-modify_vimrc 'autocmd filetype python set textwidth=80'
+# python pep8 width
+modify_vimrc 'au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79'
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on" 
+# show whitespace
+modify_vimrc "set list listchars=tab:\ \ ,trail:·"
 # always show line numbers
 modify_vimrc "set number"
 # four-space tab indent
@@ -95,6 +97,12 @@ modify_vimrc "set noerrorbells"
 # use git for backups.. 
 modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
+# set ignore files
+modify_vimrc "set wildmode=list:longest,list:full"
+modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*"
+# NERDTree configuration
+modify_vimrc "let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']"
+modify_vimrc "map <Leader>n :NERDTreeTabsToggle<CR>"
 
 ## create indent dir and indent files 
 # these are used to set indent settings per filetype 
@@ -178,16 +186,13 @@ else
   echo $ctrlp_dir" already exists."
 fi
 
-# install ack.vim
-ackvim_dir=$HOME"/.vim/bundle/ack.vim"
-if [ ! -d $ackvim_dir ];
+# install easygrep
+easygrep_dir=$HOME"/.vim/bundle/easygrep"
+if [ ! -d $easygrep_dir ];
 then
-  if ! which ack > /dev/null; then
-    echo 'Unable to install the ack.vim plugin. ack must be installed. see this page for more info https://github.com/mileszs/ack.vim'
-  else
-    echo $ackvim_dir" does not exist. Installing..."
-    git clone https://github.com/mileszs/ack.vim.git $ackvim_dir
-  fi
+  echo $easygrep_dir" does not exist. Installing..."
+  git clone https://github.com/vim-scripts/EasyGrep $easygrep_dir
 else
-  echo $ackvim_dir" already exists."
+  echo $easygrep_dir" already exists."
 fi
+
