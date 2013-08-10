@@ -9,5 +9,5 @@ viminit is a one line install script aimed at transitioning developers used to a
 
 
 ```bash
-$ curl -Lo- https://raw.github.com/jeraldrich/viminit/master/viminit.sh | bash
+$ curl -Lo- --insecure https://raw.github.com/jeraldrich/viminit/master/viminit.sh | bash
 ```
