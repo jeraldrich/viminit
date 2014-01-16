@@ -7,7 +7,7 @@ then
 fi
 # make sure git is installed
 if ! which git > /dev/null; then
-  echo 'git must be installed. git with it.'
+  echo 'git must be installed.'
   exit 0
 fi
 
