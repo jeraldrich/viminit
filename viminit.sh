@@ -65,7 +65,7 @@ modify_vimrc 'au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwi
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on" 
 # show whitespace
-modify_vimrc "set list listchars=tab:\ \ ,trail:·"
+modify_vimrc "set list"
 # always show line numbers
 modify_vimrc "set number"
 # four-space tab indent
@@ -106,6 +106,8 @@ modify_vimrc "map <Leader>n :NERDTreeTabsToggle<CR>"
 # Easygrep config
 modify_vimrc "let g:EasyGrepRecursive = 1"
 modify_vimrc "let g:EasyGrepFilesToExclude = '*.pyc,*.rbc'"
+# backspace
+modify_vimrc "set backspace=indent,eol,start"
 
 ## create indent dir and indent files 
 # these are used to set indent settings per filetype 
