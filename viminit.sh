@@ -111,6 +111,8 @@ modify_vimrc "set list listchars=tab:\\|\\"
 modify_vimrc "highlight Whitespace cterm=underline gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
 modify_vimrc "autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
 modify_vimrc "match Whitespace /  \\+/"
+# use non-utf8 nerdtree arrows so utf-8 is not required and doesnt display weird symbols
+modify_vimrc "let g:NERDTreeDirArrows=0"
 
 ## create indent dir and indent files 
 # these are used to set indent settings per filetype 
