@@ -108,8 +108,8 @@ modify_vimrc "let g:EasyGrepFilesToExclude = '*.pyc,*.rbc'"
 modify_vimrc "set backspace=indent,eol,start"
 # show whitespace characters
 modify_vimrc "set list listchars=tab:\\|\\" 
-modify_vimrc "highlight Whitespace cterm=underline gui=underline ctermbg=NONE guibg=NONE ctermfg=yellow guifg=yellow"
-modify_vimrc "autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=NONE guibg=NONE ctermfg=yellow guifg=yellow"
+modify_vimrc "highlight Whitespace cterm=underline gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
+modify_vimrc "autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
 modify_vimrc "match Whitespace /  \\+/"
 
 ## create indent dir and indent files 
