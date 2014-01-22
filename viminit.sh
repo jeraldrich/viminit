@@ -57,7 +57,7 @@ modify_vimrc "execute pathogen#infect()" "prepend"
 modify_vimrc 'autocmd VimEnter * NERDTree'
 modify_vimrc 'autocmd VimEnter * wincmd l'
 # expand tab if python file
-modify_vimrc 'autocmd filetype python set expandtab'
+modify_vimrc 'set expandtab'
 # smartindent if python. example if True: <enter> new line will be tab by tabstop num
 modify_vimrc 'autocmd filetype python set smartindent'
 # python pep8 width
