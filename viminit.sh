@@ -53,6 +53,7 @@ function modify_vimrc()
 }
 # modify vimrc to run pathogen on vim startup
 modify_vimrc "execute pathogen#infect()" "prepend"
+modify_vimrc "filetype plugin on"
 # start nerdtree and reset focus from nerdtree to open file
 modify_vimrc 'autocmd VimEnter * NERDTree'
 modify_vimrc 'autocmd VimEnter * wincmd l'
@@ -78,7 +79,6 @@ modify_vimrc "set hlsearch"
 modify_vimrc "set incsearch"
 # show matching parenthesis
 modify_vimrc "set showmatch"
-modify_vimrc "filetype plugin on"
 # autoindent on newlines
 modify_vimrc "set autoindent"
 # ignore case if search pattern is all lowercase
