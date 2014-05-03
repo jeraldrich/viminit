@@ -1,5 +1,6 @@
 # viminit
 =======
+![alt tag](ss.png)
 <b> I highly recommend reviewing the shell script before running it via curl. </b>
 
 <b>I am currently developing this project based off my own personal workflow. I am going to release a video once a final version of the project is complete.</b>
