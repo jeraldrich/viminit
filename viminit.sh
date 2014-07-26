@@ -18,12 +18,12 @@ pathogen_file=$HOME"/.vim/autoload/pathogen.vim"
 if [ ! -e $pathogen_file ];
 then 
   echo 'installing pathogen'
-  curl -LSso --insecure ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  curl -Lo- --insecure https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim > $pathogen_file
 else
   echo 'Pathogen already installed'
 fi
 
-function modify_vimrc() 
+function modify_vimrc()
 {
   vimrc_file=$HOME"/.vimrc"
   if [ ! -f $vimrc_file ];
