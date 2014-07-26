@@ -18,8 +18,7 @@ pathogen_file=$HOME"/.vim/autoload/pathogen.vim"
 if [ ! -e $pathogen_file ];
 then 
   echo 'installing pathogen'
-  curl -LSso "https://tpo.pe/pathogen.vim" \
-        > $HOME"/.vim/autoload/pathogen.vim"
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 else
   echo 'Pathogen already installed'
 fi
