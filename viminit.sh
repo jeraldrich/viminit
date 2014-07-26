@@ -206,3 +206,13 @@ else
   echo $easygrep_dir" already exists."
 fi
 
+# install vim-go
+vimgo_dir=$HOME"/.vim/bundle/vim-go"
+if [ ! -d $vimgo_dir ];
+then
+  echo $vimgo_dir" does not exist. Installing..."
+  git clone https://github.com/fatih/vim-go.git $vimgo_dir
+else
+  echo $vimgo_dir" already exists."
+fi
+
