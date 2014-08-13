@@ -215,3 +215,14 @@ else
   echo $vimgo_dir" already exists."
 fi
 
+# pretty molokai theme
+modify_vimrc "let g:molokai_original = 1"
+mkdir -p ~/.vim/colors
+molokai_theme_file=$HOME"/.vim/colors/molokai.vim"
+if [ ! -e $molokai_theme_file ];
+then 
+  echo 'installing molokai theme'
+  curl -Lo- --insecure https://raw.githubusercontent.com/fatih/molokai/master/colors/molokai.vim > $molokai_theme_file
+else
+  echo 'molokai theme already installed'
+fi
