@@ -226,3 +226,4 @@ then
 else
   echo 'molokai theme already installed'
 fi
+modify_vimrc "colorscheme molokai"
