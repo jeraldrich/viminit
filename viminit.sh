@@ -14,6 +14,7 @@ fi
 # install pathogen
 mkdir -p ~/.vim/autoload
 mkdir -p ~/.vim/bundle
+mkdir -p ~/.vim/colors
 pathogen_file=$HOME"/.vim/autoload/pathogen.vim"
 if [ ! -e $pathogen_file ];
 then 
@@ -216,12 +217,14 @@ else
 fi
 
 # pretty molokai theme
-sunburst_dir=$HOME"/.vim/bundle/sunburst"
-if [ ! -d $sunburst_dir ];
+mkdir -p ~/.vim/colors
+molokai_file=$HOME"/.vim/colors/molokai.vim"
+if [ ! -e $molokai_file ];
 then 
-  echo 'installing sunburst theme'
-  git clone git://github.com/sickill/vim-sunburst.git $sunburst_dir
+  echo 'installing molokai theme'
+  curl -Lo- --insecure https://raw.githubusercontent.com/fatih/molokai/master/colors/molokai.vim > $molokai_file
 else
-  echo 'sunburst theme already installed'
+  echo 'molokai theme already installed'
 fi
-modify_vimrc "colorscheme Sunburst"
+modify_vimrc "let g:rehash256 = 1"
+modify_vimrc "colorscheme molokai"
