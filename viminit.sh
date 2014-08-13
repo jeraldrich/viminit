@@ -216,14 +216,12 @@ else
 fi
 
 # pretty molokai theme
-modify_vimrc "let g:molokai_original = 1"
-mkdir -p ~/.vim/colors
-molokai_theme_file=$HOME"/.vim/colors/molokai.vim"
-if [ ! -e $molokai_theme_file ];
+sunburst_dir=$HOME"/.vim/bundle/sunburst"
+if [ ! -d $sunburst_dir ];
 then 
-  echo 'installing molokai theme'
-  curl -Lo- --insecure https://raw.githubusercontent.com/fatih/molokai/master/colors/molokai.vim > $molokai_theme_file
+  echo 'installing sunburst theme'
+  git clone git://github.com/sickill/vim-sunburst.git $sunburst_dir
 else
-  echo 'molokai theme already installed'
+  echo 'sunburst theme already installed'
 fi
-modify_vimrc "colorscheme molokai"
+modify_vimrc "colorscheme Sunburst"
