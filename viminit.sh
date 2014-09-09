@@ -113,6 +113,7 @@ modify_vimrc "autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=N
 modify_vimrc "match Whitespace /  \\+/"
 # use non-utf8 nerdtree arrows so utf-8 is not required and doesnt display weird symbols
 modify_vimrc "let g:NERDTreeDirArrows=0"
+modify_vimrc "t_Co=256"
 
 ## create indent dir and indent files 
 # these are used to set indent settings per filetype 
@@ -204,16 +205,6 @@ then
   git clone https://github.com/vim-scripts/EasyGrep $easygrep_dir
 else
   echo $easygrep_dir" already exists."
-fi
-
-# install vim-go
-vimgo_dir=$HOME"/.vim/bundle/vim-go"
-if [ ! -d $vimgo_dir ];
-then
-  echo $vimgo_dir" does not exist. Installing..."
-  git clone https://github.com/fatih/vim-go.git $vimgo_dir
-else
-  echo $vimgo_dir" already exists."
 fi
 
 # pretty molokai theme
