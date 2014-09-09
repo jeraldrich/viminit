@@ -113,7 +113,7 @@ modify_vimrc "autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=N
 modify_vimrc "match Whitespace /  \\+/"
 # use non-utf8 nerdtree arrows so utf-8 is not required and doesnt display weird symbols
 modify_vimrc "let g:NERDTreeDirArrows=0"
-modify_vimrc "t_Co=256"
+modify_vimrc "set t_Co=256"
 
 ## create indent dir and indent files 
 # these are used to set indent settings per filetype 
