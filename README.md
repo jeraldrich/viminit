@@ -2,7 +2,7 @@
 =======
 All that syntax checking, auto indent, nerdtree, fuzzy search (filename, filecontent) goodness installed as unobtrusive as possible so you can get to work without a bunch of magic happening.
 
-Simple script which installs pathogen, and git clones popular repo's into bundle, and modify's vimrc. Reasonably tested.
+Simple script which installs pathogen, and git clones popular repo's into bundle, and modify's vimrc.
 
 ![alt tag](ss.png)
 
