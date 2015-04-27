@@ -106,14 +106,23 @@ modify_vimrc "let g:EasyGrepRecursive = 1"
 modify_vimrc "let g:EasyGrepFilesToExclude = '*.pyc,*.rbc'"
 # backspace
 modify_vimrc "set backspace=indent,eol,start"
-# show whitespace characters
-modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\" 
 modify_vimrc "highlight Whitespace cterm=underline gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
 modify_vimrc "autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
 modify_vimrc "match Whitespace /  \\+/"
 # use non-utf8 nerdtree arrows so utf-8 is not required and doesnt display weird symbols
 modify_vimrc "let g:NERDTreeDirArrows=0"
 modify_vimrc "set t_Co=256"
+# python stuff
+# show whitespace characters as a light grey
+modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\" 
+modify_vimrc "autocmd filetype python set textwidth=79"
+modify_vimrc "filetype python set shiftwidth=4" # operation >> indents 4 columns; << unindents 4 columns                
+modify_vimrc "filetype python set tabstop=4" # a hard TAB displays as 4 columns
+modify_vimrc "filetype python set expandtab" # insert spaces when hitting TABs                                       
+modify_vimrc "filetype python set softtabstop=4" # insert/delete 4 spaces when hitting a TAB/BACKSPACE
+modify_vimrc "filetype python set shiftround" # round indent to multiple of 'shiftwidth'                              
+modify_vimrc "filetype python set autoindent" # align the new line indent with the previous line"
+modify_vimrc "BufWritePost *.py call Flake8()" # run flake8 on every filesave
 
 ## create indent dir and indent files 
 # these are used to set indent settings per filetype 
@@ -205,6 +214,16 @@ then
   git clone https://github.com/vim-scripts/EasyGrep $easygrep_dir
 else
   echo $easygrep_dir" already exists."
+fi
+
+# install vim-flake8
+vimflake8_dir=$HOME"/.vim/bundle/vim-flake8"
+if [ ! -d $vimflake8_dir ];
+then
+  echo $vimflake8_dir" does not exist. Installing..."
+  git clone https://github.com/nvie/vim-flake8.git $vimflake8_dir
+else
+  echo $vimflake8_dir" already exists."
 fi
 
 # pretty molokai theme
