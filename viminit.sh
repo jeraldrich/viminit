@@ -55,14 +55,12 @@ function modify_vimrc()
 modify_vimrc "execute pathogen#infect()" "prepend"
 modify_vimrc "filetype plugin on"
 # start nerdtree and reset focus from nerdtree to open file
-modify_vimrc 'autocmd VimEnter * NERDTree'
-modify_vimrc 'autocmd VimEnter * wincmd l'
-# expand tab if python file
-modify_vimrc 'set expandtab'
-# smartindent if python. example if True: <enter> new line will be tab by tabstop num
-modify_vimrc 'autocmd filetype python set smartindent'
-# python pep8 width
-modify_vimrc 'au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79'
+modify_vimrc "autocmd VimEnter * NERDTree"
+modify_vimrc "autocmd VimEnter * wincmd l"
+# python pep8 width, smartindents
+modify_vimrc "au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79"
+# new line after methods, class ect in python (very annoying if not set)
+modify_vimrc "autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class"
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on"
 # always show line numbers
@@ -71,6 +69,8 @@ modify_vimrc "set number"
 modify_vimrc "set tabstop=4"
 # shift < > keys to 4
 modify_vimrc "set shiftwidth=4"
+# expand tab
+modify_vimrc "set expandtab"
 # insert tabs on the start of a line according to shiftwidth not tabstop
 modify_vimrc "set smarttab"
 # highlight search terms
@@ -81,6 +81,8 @@ modify_vimrc "set incsearch"
 modify_vimrc "set showmatch"
 # autoindent on newlines
 modify_vimrc "set autoindent"
+# does the right thing (mostly)
+modify_vimrc "set smartindent"
 # ignore case if search pattern is all lowercase
 modify_vimrc "set smartcase"
 # change terminal title
