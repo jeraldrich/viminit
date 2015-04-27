@@ -1,9 +1,9 @@
 # viminit
 =======
+viminit! when you just want all that syntax checking, auto indent, nerdtree, fuzzy search goodness installed on any environment in one command
+
 ![alt tag](ss.png)
 ![alt tag](ss2.png)
-
-viminit! when you just want all that syntax checking, auto indent, nerdtree, fuzzy search goodness installed on any environment in one command
 
 ## Tested on
 - debian7
