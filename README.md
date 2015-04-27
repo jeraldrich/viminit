@@ -13,7 +13,9 @@ Simple bash script which installs pathogen, and git clones popular repo's into b
 - Freebsd 10
 
 ## Works great with
-- Python smart indentation handling, pep8 check on filesave (courtesy of https://github.com/nvie/vim-flake8)
+- Python smart indentation handling (works as you expect)
+- pep8 check on filesave (courtesy of https://github.com/nvie/vim-flake8)
+- show pep8 errors as highlight in file, rather than in new window so main window does not lose focus
 - Don't forget to install flake8: pip install flake8
 
 ## TODO:
