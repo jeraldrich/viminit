@@ -10,4 +10,4 @@ viminit! when you just want all that syntax checking, auto indent, nerdtree, fuz
 $ curl -Lo- --insecure https://raw.github.com/jeraldrich/viminit/master/viminit.sh | bash
 ```
 
-BAM. Done. No rubygems. Just one simple shell script doing all the work for you. Now get to work! ;) 
+BAM. Done. No babysitting rubygems. Now get to work!! ;) 
