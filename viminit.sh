@@ -114,7 +114,8 @@ modify_vimrc "let g:NERDTreeDirArrows=0"
 modify_vimrc "set t_Co=256"
 # python stuff
 # show whitespace characters as a light grey
-modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\" 
+# this is just my personal preference. Commented out so it doesn't annoy others
+# modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\" 
 modify_vimrc "autocmd filetype python set textwidth=79"
 modify_vimrc "autocmd filetype python set shiftwidth=4" # operation >> indents 4 columns; << unindents 4 columns                
 modify_vimrc "autocmd filetype python set tabstop=4" # a hard TAB displays as 4 columns
