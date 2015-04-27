@@ -10,12 +10,10 @@ viminit! when you just want all that syntax checking, auto indent, nerdtree, fuz
 - centos6
 - OSX Lion/Mavericks
 - Freebsd 10
-- 
 
 ## Works great with
 - Python auto indentation, pep8 check on filesave, whitespace indicator (courtesy of https://github.com/nvie/vim-flake8)
 - Don't forget to install flake8: pip install flake8
--
 
 ## TODO:
 - create backups of exists vim directory / vimrc
