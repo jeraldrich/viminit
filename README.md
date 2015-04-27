@@ -1,8 +1,10 @@
 # viminit
 =======
-viminit! Install a practical vim environment in less than 10 seconds on any environment without babysitting rubygems.
+Install a practical vim environment in less than 10 seconds on any environment without babysitting rubygems.
 
-All that syntax checking, auto indent, nerdtree, fuzzy search goodness. Aims to be minimal and unobtrusive, so you can get to work without a bunch of magic happening.
+All that syntax checking, auto indent, nerdtree, fuzzy search goodness. 
+
+Aims to be minimal and unobtrusive, so you can get to work without a bunch of magic happening.
 
 ![alt tag](ss.png)
 
