@@ -1,8 +1,8 @@
 # viminit
 =======
-Install a practical vim environment in less than 10 seconds on any environment without babysitting rubygems.
-
 All that syntax checking, auto indent, nerdtree, fuzzy search (filename, filecontent) goodness installed as unobtrusive as possible so you can get to work without a bunch of magic happening.
+
+Simple script which installs pathogen, and git clones popular repo's into bundle, and modify's vimrc. Reasonably tested.
 
 ![alt tag](ss.png)
 
