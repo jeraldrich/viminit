@@ -13,7 +13,7 @@ Simple bash script which installs pathogen, and git clones popular repo's into b
 - Freebsd 10
 
 ## Works great with
-- Python auto indentation, pep8 check on filesave, whitespace indicator (courtesy of https://github.com/nvie/vim-flake8)
+- Python auto indentation, pep8 check on filesave (courtesy of https://github.com/nvie/vim-flake8)
 - Don't forget to install flake8: pip install flake8
 
 ## TODO:
