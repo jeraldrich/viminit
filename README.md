@@ -28,5 +28,5 @@ Simple bash script which installs pathogen, and git clones popular repo's into b
 $ curl -Lo- --insecure https://raw.github.com/jeraldrich/viminit/master/viminit.sh | bash
 ```
 
-BAM! Done. It's not going to win any code artshows, but it gets the job done.
+BAM! Done. It's not going to win any code artshows, but it gets the job done :ok_hand:
 
