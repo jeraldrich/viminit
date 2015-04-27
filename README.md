@@ -1,9 +1,10 @@
 # viminit
 =======
-viminit! when you just want all that syntax checking, auto indent, nerdtree, fuzzy search goodness installed on any environment in one command
+viminit! Install a practical vim environment in less than 10 seconds on any environment without babysitting rubygems.
+
+All that syntax checking, auto indent, nerdtree, fuzzy search goodness that gets out of your way, and let's you get to work.
 
 ![alt tag](ss.png)
-![alt tag](ss2.png)
 
 ## Tested on
 - debian7
@@ -27,5 +28,5 @@ viminit! when you just want all that syntax checking, auto indent, nerdtree, fuz
 $ curl -Lo- --insecure https://raw.github.com/jeraldrich/viminit/master/viminit.sh | bash
 ```
 
-BAM! Done. No babysitting rubygems. It's not going to win any code artshows, but it gets the job done.
+BAM! Done. It's not going to win any code artshows, but it gets the job done.
 
