@@ -54,13 +54,6 @@ function modify_vimrc()
 # modify vimrc to run pathogen on vim startup
 modify_vimrc "execute pathogen#infect()" "prepend"
 modify_vimrc "filetype plugin on"
-# start nerdtree and reset focus from nerdtree to open file
-modify_vimrc "autocmd VimEnter * NERDTree"
-modify_vimrc "autocmd VimEnter * wincmd l"
-# python pep8 width, smartindents
-modify_vimrc "au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79"
-# new line after methods, class ect in python (very annoying if not set)
-modify_vimrc "autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class"
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on"
 # always show line numbers
@@ -118,14 +111,12 @@ modify_vimrc "set t_Co=256"
 # show whitespace characters as a light grey
 # this is just my personal preference. Commented out so it doesn't annoy others
 # modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\" 
-modify_vimrc "autocmd filetype python set textwidth=79"
-modify_vimrc "autocmd filetype python set shiftwidth=4" # operation >> indents 4 columns; << unindents 4 columns                
-modify_vimrc "autocmd filetype python set tabstop=4" # a hard TAB displays as 4 columns
-modify_vimrc "autocmd filetype python set expandtab" # insert spaces when hitting TABs                                       
-modify_vimrc "autocmd filetype python set softtabstop=4" # insert/delete 4 spaces when hitting a TAB/BACKSPACE
-modify_vimrc "autocmd filetype python set shiftround" # round indent to multiple of 'shiftwidth'                              
-modify_vimrc "autocmd filetype python set autoindent" # align the new line indent with the previous line"
-modify_vimrc "autocmd BufWritePost *.py call Flake8()" # run flake8 on every filesave
+# pep8 width, smartindents
+modify_vimrc "au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79"
+# new line after methods, class ect in python (very annoying if not set)
+modify_vimrc "autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class"
+# run flake8 on every python filesave, with markers on pep8 error
+modify_vimrc "autocmd BufWritePost *.py call Flake8()"
 
 ## create indent dir and indent files 
 # these are used to set indent settings per filetype 
