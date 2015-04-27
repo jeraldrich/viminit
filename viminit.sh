@@ -116,13 +116,13 @@ modify_vimrc "set t_Co=256"
 # show whitespace characters as a light grey
 modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\" 
 modify_vimrc "autocmd filetype python set textwidth=79"
-modify_vimrc "filetype python set shiftwidth=4" # operation >> indents 4 columns; << unindents 4 columns                
-modify_vimrc "filetype python set tabstop=4" # a hard TAB displays as 4 columns
-modify_vimrc "filetype python set expandtab" # insert spaces when hitting TABs                                       
-modify_vimrc "filetype python set softtabstop=4" # insert/delete 4 spaces when hitting a TAB/BACKSPACE
-modify_vimrc "filetype python set shiftround" # round indent to multiple of 'shiftwidth'                              
-modify_vimrc "filetype python set autoindent" # align the new line indent with the previous line"
-modify_vimrc "BufWritePost *.py call Flake8()" # run flake8 on every filesave
+modify_vimrc "autocmd filetype python set shiftwidth=4" # operation >> indents 4 columns; << unindents 4 columns                
+modify_vimrc "autocmd filetype python set tabstop=4" # a hard TAB displays as 4 columns
+modify_vimrc "autocmd filetype python set expandtab" # insert spaces when hitting TABs                                       
+modify_vimrc "autocmd filetype python set softtabstop=4" # insert/delete 4 spaces when hitting a TAB/BACKSPACE
+modify_vimrc "autocmd filetype python set shiftround" # round indent to multiple of 'shiftwidth'                              
+modify_vimrc "autocmd filetype python set autoindent" # align the new line indent with the previous line"
+modify_vimrc "autocmd BufWritePost *.py call Flake8()" # run flake8 on every filesave
 
 ## create indent dir and indent files 
 # these are used to set indent settings per filetype 
