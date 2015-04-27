@@ -117,6 +117,9 @@ modify_vimrc "au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwi
 modify_vimrc "autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class"
 # run flake8 on every python filesave, with markers on pep8 error
 modify_vimrc "autocmd BufWritePost *.py call Flake8()"
+# just highlight pep8 errors in file, rather than create new window (annoying)
+modify_vimrc  "let g:flake8_show_quickfix=0"
+modify_vimrc  "let g:flake8_show_in_file=1"
 
 ## create indent dir and indent files 
 # these are used to set indent settings per filetype 
