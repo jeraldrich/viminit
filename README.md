@@ -27,5 +27,5 @@ viminit! when you just want all that syntax checking, auto indent, nerdtree, fuz
 $ curl -Lo- --insecure https://raw.github.com/jeraldrich/viminit/master/viminit.sh | bash
 ```
 
-10 seconds and BAM! Done. No babysitting rubygems. It's not going to win any code artshows, but it gets the job done.
+BAM! Done. No babysitting rubygems. It's not going to win any code artshows, but it gets the job done.
 
