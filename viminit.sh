@@ -99,7 +99,7 @@ modify_vimrc "map <Leader>n :NERDTreeTabsToggle<CR>"
 # Easygrep config
 modify_vimrc "let g:EasyGrepRecursive = 1"
 modify_vimrc "let g:EasyGrepFilesToExclude = '*.pyc,*.rbc'"
-# backspace
+# show whitespace characters as barely visible dark gray
 modify_vimrc "set backspace=indent,eol,start"
 modify_vimrc "highlight Whitespace cterm=underline gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
 modify_vimrc "autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
