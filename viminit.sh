@@ -99,7 +99,7 @@ modify_vimrc "map <Leader>n :NERDTreeTabsToggle<CR>"
 # Easygrep config
 modify_vimrc "let g:EasyGrepRecursive = 1"
 modify_vimrc "let g:EasyGrepFilesToExclude = '*.pyc,*.rbc'"
-# show whitespace characters as barely visible dark gray
+# show whitespace characters as barely visible dark gray, trailing whitespace
 modify_vimrc "set backspace=indent,eol,start"
 modify_vimrc "highlight Whitespace cterm=underline gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
 modify_vimrc "autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
@@ -108,7 +108,7 @@ modify_vimrc "match Whitespace /  \\+/"
 modify_vimrc "let g:NERDTreeDirArrows=0"
 modify_vimrc "set t_Co=256"
 # python stuff
-# show whitespace characters as a light grey
+# show ALL whitespace up to code as a light grey lines
 # this is just my personal preference. Commented out so it doesn't annoy others
 # modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\" 
 # pep8 width, smartindents
