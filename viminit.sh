@@ -233,5 +233,17 @@ then
 else
   echo 'molokai theme already installed'
 fi
+
+# codecompletion, method class docstring
+youcompleteme_dir=$HOME"/.vim/bundle/YouCompleteMe"
+if [ ! -e $youcompleteme_dir ];
+then 
+  echo 'installing YouCompleteMe'
+  git clone https://github.com/Valloric/YouCompleteMe.git $youcompleteme_dir
+else
+  echo 'YouCompleteMe already installed'
+fi
+
+
 modify_vimrc "let g:rehash256 = 1"
 modify_vimrc "colorscheme molokai"
