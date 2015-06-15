@@ -94,7 +94,7 @@ modify_vimrc "set noswapfile"
 modify_vimrc "set wildmode=list:longest,list:full"
 modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*"
 # NERDTree configuration
-modify_vimrc "let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']"
+modify_vimrc "let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '__pycache__']"
 modify_vimrc "map <Leader>n :NERDTreeTabsToggle<CR>"
 # Easygrep config
 modify_vimrc "let g:EasyGrepRecursive = 1"
