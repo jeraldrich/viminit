@@ -203,16 +203,6 @@ else
   echo $ctrlp_dir" already exists."
 fi
 
-# install easygrep
-easygrep_dir=$HOME"/.vim/bundle/easygrep"
-if [ ! -d $easygrep_dir ];
-then
-  echo $easygrep_dir" does not exist. Installing..."
-  git clone https://github.com/vim-scripts/EasyGrep $easygrep_dir
-else
-  echo $easygrep_dir" already exists."
-fi
-
 # install vim-flake8
 vimflake8_dir=$HOME"/.vim/bundle/vim-flake8"
 if [ ! -d $vimflake8_dir ];
