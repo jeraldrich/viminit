@@ -245,5 +245,15 @@ else
 fi
 
 
+# ag fuzzy full project filename and content search faster than ack or grep
+ag_dir=$HOME"/.vim/bundle/ag"
+if [ ! -e $ag_dir ];
+then 
+  echo 'installing ag'
+  git clone git clone https://github.com/rking/ag.vim $ag_dir
+else
+  echo 'ag already installed'
+fi
+
 modify_vimrc "let g:rehash256 = 1"
 modify_vimrc "colorscheme molokai"
