@@ -226,7 +226,7 @@ fi
 
 # codecompletion, method class docstring
 youcompleteme_dir=$HOME"/.vim/bundle/YouCompleteMe"
-if [ ! -e $youcompleteme_dir ];
+if [ ! -d $youcompleteme_dir ];
 then 
   echo 'installing YouCompleteMe'
   git clone https://github.com/Valloric/YouCompleteMe.git $youcompleteme_dir
@@ -237,7 +237,7 @@ fi
 
 # ag fuzzy full project filename and content search faster than ack or grep
 ag_dir=$HOME"/.vim/bundle/ag"
-if [ ! -e $ag_dir ];
+if [ ! -d $ag_dir ];
 then 
   echo 'installing ag'
   git clone https://github.com/rking/ag.vim $ag_dir
