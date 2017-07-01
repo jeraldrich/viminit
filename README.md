@@ -1,6 +1,7 @@
 # viminit
 My vim config. This script is dumb, simple, and has no dependencies. Works on linux, freebsd, osx.
 
+- standardizes python files to use autoindented pep8 whitespace
 - nerdtree (ctrl+\ shows dir tree)
 - nerdcommenter (makes mass commenting / uncommenting easier)
 - vim-surround (siX surrounds word in X)
