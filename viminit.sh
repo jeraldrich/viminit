@@ -240,7 +240,7 @@ ag_dir=$HOME"/.vim/bundle/ag"
 if [ ! -e $ag_dir ];
 then 
   echo 'installing ag'
-  git clone git clone https://github.com/rking/ag.vim $ag_dir
+  git clone https://github.com/rking/ag.vim $ag_dir
 else
   echo 'ag already installed'
 fi
