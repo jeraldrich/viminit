@@ -1,5 +1,5 @@
 # viminit
-My vim config. This script is dumb, simple, and sweet. Any server you login to, just curl and you get all the vim goodies.
+My vim config. This script is dumb, simple, and sweet. Works on linux, freebsd, osx
 
 - nerdtree (ctrl+\ shows dir tree)
 - nerdcommenter (makes mass commenting / uncommenting easier)
