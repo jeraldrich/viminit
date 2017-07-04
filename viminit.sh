@@ -225,14 +225,14 @@ else
 fi
 
 # codecompletion, method class docstring
-youcompleteme_dir=$HOME"/.vim/bundle/YouCompleteMe"
-if [ ! -d $youcompleteme_dir ];
-then 
-  echo 'installing YouCompleteMe'
-  git clone https://github.com/Valloric/YouCompleteMe.git $youcompleteme_dir
-else
-  echo 'YouCompleteMe already installed'
-fi
+# youcompleteme_dir=$HOME"/.vim/bundle/YouCompleteMe"
+# if [ ! -d $youcompleteme_dir ];
+# then 
+#   echo 'installing YouCompleteMe'
+#   git clone https://github.com/Valloric/YouCompleteMe.git $youcompleteme_dir
+# else
+#   echo 'YouCompleteMe already installed'
+# fi
 
 
 # ag fuzzy full project filename and content search faster than ack or grep
