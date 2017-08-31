@@ -53,19 +53,22 @@ function modify_vimrc()
 }
 # modify vimrc to run pathogen on vim startup
 modify_vimrc "execute pathogen#infect()" "prepend"
+# enable additional plugins
 modify_vimrc "filetype plugin on"
+# always indent using spaces
+modify_vimrc "filetype plugin indent on"
+# show existing tab with 4 spaces width
+modify_vimrc "set tabstop=4"
+# when indenting with '>', use 4 spaces width
+modify_vimrc "set shiftwidth=4"
+# On pressing tab, insert 4 spaces
+modify_vimrc "set expandtab"
+# expands tabs to number of spaces
+modify_vimrc "set smarttab"
 # set sensible .vimrc settings like set number, show match ect
 modify_vimrc "syntax on"
 # always show line numbers
 modify_vimrc "set number"
-# four-space tab indent
-modify_vimrc "set tabstop=4"
-# shift < > keys to 4
-modify_vimrc "set shiftwidth=4"
-# expand tab
-modify_vimrc "set expandtab"
-# insert tabs on the start of a line according to shiftwidth not tabstop
-modify_vimrc "set smarttab"
 # highlight search terms
 modify_vimrc "set hlsearch"
 # show search matches as you type"
@@ -74,8 +77,6 @@ modify_vimrc "set incsearch"
 modify_vimrc "set showmatch"
 # autoindent on newlines
 modify_vimrc "set autoindent"
-# does the right thing (mostly)
-modify_vimrc "set smartindent"
 # ignore case if search pattern is all lowercase
 modify_vimrc "set smartcase"
 # change terminal title
@@ -121,8 +122,7 @@ modify_vimrc "autocmd BufWritePost *.py call Flake8()"
 modify_vimrc  "let g:flake8_show_quickfix=0"
 modify_vimrc  "let g:flake8_show_in_file=1"
 
-## create indent dir and indent files 
-# these are used to set indent settings per filetype 
+# smart next line indention detection
 mkdir -p ~/.vim/indent
 python_indent_file=$HOME"/.vim/indent/python.vim"
 if [ ! -e $python_indent_file ];
@@ -134,8 +134,7 @@ else
   echo 'Python indent file already installed'
 fi
 
-## install plugins ##
-
+## install pathogen plugins ##
 bundle_dir=$HOME"/.vim/bundle"
 if [ ! -d $bundle_dir ];
 then
@@ -223,17 +222,6 @@ then
 else
   echo 'molokai theme already installed'
 fi
-
-# codecompletion, method class docstring
-# youcompleteme_dir=$HOME"/.vim/bundle/YouCompleteMe"
-# if [ ! -d $youcompleteme_dir ];
-# then 
-#   echo 'installing YouCompleteMe'
-#   git clone https://github.com/Valloric/YouCompleteMe.git $youcompleteme_dir
-# else
-#   echo 'YouCompleteMe already installed'
-# fi
-
 
 # ag fuzzy full project filename and content search faster than ack or grep
 ag_dir=$HOME"/.vim/bundle/ag"
