@@ -108,10 +108,8 @@ modify_vimrc "match Whitespace /  \\+/"
 # use non-utf8 nerdtree arrows so utf-8 is not required and doesnt display weird symbols
 modify_vimrc "let g:NERDTreeDirArrows=0"
 modify_vimrc "set t_Co=256"
-# python stuff
-# show ALL whitespace preceding code as a light grey lines
-# this is just my personal preference. Commented out so it doesn't annoy others
-# modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\" 
+# show whitespace chars as grey lines
+modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\" 
 # pep8 width, smartindents
 modify_vimrc "au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79"
 # new line after methods, class ect in python (very annoying if not set)
