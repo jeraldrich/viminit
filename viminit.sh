@@ -219,15 +219,15 @@ else
   echo $vimflake8_dir" already exists."
 fi
 
-# pretty molokai theme
+# mustang horsey theme
 mkdir -p ~/.vim/colors
-molokai_file=$HOME"/.vim/colors/molokai.vim"
-if [ ! -e $molokai_file ];
+mustang_file=$HOME"/.vim/colors/mustang.vim"
+if [ ! -e $mustang_file ];
 then 
-  echo 'installing molokai theme'
-  curl -Lo- --insecure https://raw.githubusercontent.com/fatih/molokai/master/colors/molokai.vim > $molokai_file
+  echo 'installing purty colors'
+  curl -Lo- --insecure https://raw.githubusercontent.com/jeraldrich/mustang-vim/master/colors/mustang.vim > $mustang_file
 else
-  echo 'molokai theme already installed'
+  echo 'you already got dem pardner'
 fi
 
 # ag fuzzy full project filename and content search faster than ack or grep
@@ -241,4 +241,4 @@ else
 fi
 
 modify_vimrc "let g:rehash256 = 1"
-modify_vimrc "colorscheme molokai"
+modify_vimrc "colorscheme mustang"
