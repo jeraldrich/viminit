@@ -59,6 +59,8 @@ modify_vimrc "filetype plugin on"
 modify_vimrc "filetype plugin indent on"
 # show existing tab with 4 spaces width
 modify_vimrc "set tabstop=4"
+# preserve undo marks and buffers while buffer is open on existing file when opening new file
+modify_vimrc "set hidden"
 # when indenting with '>', use 4 spaces width
 modify_vimrc "set shiftwidth=4"
 # On pressing tab, insert 4 spaces
@@ -88,23 +90,20 @@ modify_vimrc "set undolevels=1000"
 # don't beep
 modify_vimrc "set visualbell"
 modify_vimrc "set noerrorbells"
-# use git for backups.. 
-modify_vimrc "set nobackup"
+# no backups, swaps, or mistakes like an og 500 lb vim hacker.
+modify_vimrc "set nobackup" 
 modify_vimrc "set noswapfile"
+# if your code can't fit in 79 columns, python may not be for you
+modify_vimrc "set nowrap"
 # set ignore files
 modify_vimrc "set wildmode=list:longest,list:full"
-modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*"
+modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.swp,*.class,.svn
 # NERDTree configuration
 modify_vimrc "let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '__pycache__']"
 modify_vimrc "map <Leader>n :NERDTreeTabsToggle<CR>"
 # Easygrep config
 modify_vimrc "let g:EasyGrepRecursive = 1"
 modify_vimrc "let g:EasyGrepFilesToExclude = '*.pyc,*.rbc'"
-# show whitespace characters as barely visible dark gray, trailing whitespace
-modify_vimrc "set backspace=indent,eol,start"
-modify_vimrc "highlight Whitespace cterm=underline gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
-modify_vimrc "autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
-# modify_vimrc "match Whitespace /  \\+/"
 # use non-utf8 nerdtree arrows so utf-8 is not required and doesnt display weird symbols
 modify_vimrc "let g:NERDTreeDirArrows=0"
 modify_vimrc "set t_Co=256"
