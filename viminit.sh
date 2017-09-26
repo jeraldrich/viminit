@@ -135,7 +135,7 @@ python_indent_file=$HOME"/.vim/indent/python.vim"
 if [ ! -e $python_indent_file ];
 then 
   echo 'Installing Python indent file'
-  curl "http://www.vim.org/scripts/download_script.php?src_id=4316" \
+  curl "https://vim.sourceforge.io/scripts/download_script.php?src_id=4316" \
         > $HOME"/.vim/indent/python.vim"
 else
   echo 'Python indent file already installed'
@@ -189,7 +189,7 @@ else
   echo $vimsurround_dir" already exists."
 fi
 
-# install delimitMate
+# install delimitMate (autoclose brackets, quotes, ect)
 delimitMate_dir=$HOME"/.vim/bundle/delimitMate"
 if [ ! -d $delimitMate_dir ];
 then
