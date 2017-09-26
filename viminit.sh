@@ -97,7 +97,7 @@ modify_vimrc "set noswapfile"
 modify_vimrc "set nowrap"
 # set ignore files
 modify_vimrc "set wildmode=list:longest,list:full"
-modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.swp,*.class,.svn
+modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.swp,*.class,.svn"
 # NERDTree configuration
 modify_vimrc "let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '__pycache__']"
 modify_vimrc "map <Leader>n :NERDTreeTabsToggle<CR>"
