@@ -219,15 +219,14 @@ else
   echo $vimflake8_dir" already exists."
 fi
 
-# mustang horsey theme
-mkdir -p ~/.vim/colors
-mustang_file=$HOME"/.vim/colors/mustang.vim"
-if [ ! -e $mustang_file ];
+# coffeescript syntax highlighter, compile js tester
+coffee_dir=$HOME"/.vim/bundle/vim-coffee-script"
+if [ ! -d $coffee_dir ];
 then 
-  echo 'installing purty colors'
-  curl -Lo- --insecure https://raw.githubusercontent.com/jeraldrich/mustang-vim/master/colors/mustang.vim > $mustang_file
+  echo 'drinking coffee'
+  git clone https://github.com/kchmck/vim-coffee-script.git $coffee_dir
 else
-  echo 'you already got dem pardner'
+  echo 'you already drank coffee. tic tac?'
 fi
 
 # ag fuzzy full project filename and content search faster than ack or grep
@@ -238,6 +237,17 @@ then
   git clone https://github.com/rking/ag.vim $ag_dir
 else
   echo 'ag already installed'
+fi
+
+# mustang horsey theme
+mkdir -p ~/.vim/colors
+mustang_file=$HOME"/.vim/colors/mustang.vim"
+if [ ! -e $mustang_file ];
+then 
+  echo 'installing purty colors'
+  curl -Lo- --insecure https://raw.githubusercontent.com/jeraldrich/mustang-vim/master/colors/mustang.vim > $mustang_file
+else
+  echo 'you already got dem pardner'
 fi
 
 modify_vimrc "let g:rehash256 = 1"
