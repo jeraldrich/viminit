@@ -8,8 +8,8 @@ My vim config. This script is dumb, simple, and has no dependencies. Works on li
 - delimitMate (autocomplete parentheses, quotes, ect)
 - ctrlp (fuzzy file finder in open dir and children dir similair to atom find)
 - vim-flake8 (auto highlight pep8 style guide errors as you code)
-- molokai theme (pretty colors)
-- ag (faster than grep for file searching)
+- cool underground vim theme - mustang
+- ag (faster than grep for recursive file searching)
 
 ## Installation
 ```bash
