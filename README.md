@@ -1,5 +1,7 @@
 # viminit
-My vim config. This script is dumb, simple, and has no dependencies. Works on linux, freebsd, osx.
+My vim config. This script is dumb, simple, and has no dependencies. Works on linux, freebsd, osx. 
+
+https://github.com/jeraldrich/viminit/blob/master/mustang_theme.png
 
 - standardizes python files to use autoindented pep8 whitespace
 - nerdtree (ctrl+\ shows dir tree)
@@ -10,6 +12,7 @@ My vim config. This script is dumb, simple, and has no dependencies. Works on li
 - vim-flake8 (auto highlight pep8 style guide errors as you code)
 - cool underground vim theme - mustang
 - ag (faster than grep for recursive file searching)
+- coffeescript, ruby syntax / style checkers
 
 ## Installation
 ```bash
