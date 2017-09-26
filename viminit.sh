@@ -104,7 +104,7 @@ modify_vimrc "let g:EasyGrepFilesToExclude = '*.pyc,*.rbc'"
 modify_vimrc "set backspace=indent,eol,start"
 modify_vimrc "highlight Whitespace cterm=underline gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
 modify_vimrc "autocmd ColorScheme * highlight Whitespace gui=underline ctermbg=NONE guibg=NONE ctermfg=DarkGray guifg=DarkGray"
-modify_vimrc "match Whitespace /  \\+/"
+# modify_vimrc "match Whitespace /  \\+/"
 # use non-utf8 nerdtree arrows so utf-8 is not required and doesnt display weird symbols
 modify_vimrc "let g:NERDTreeDirArrows=0"
 modify_vimrc "set t_Co=256"
