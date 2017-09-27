@@ -51,6 +51,7 @@ function modify_vimrc()
     fi
   fi
 }
+
 # modify vimrc to run pathogen on vim startup
 modify_vimrc "execute pathogen#infect()" "prepend"
 # enable additional plugins
@@ -93,7 +94,7 @@ modify_vimrc "set noerrorbells"
 # enable vim og no backups, swaps, save points, or mercy.
 modify_vimrc "set nobackup" 
 modify_vimrc "set noswapfile"
-# if your code can't fit in 79 columns, issue may exist between keyboard and chair
+# if your code can't fit in 79 columns, python may not be for you
 modify_vimrc "set nowrap"
 # set ignore files
 modify_vimrc "set wildmode=list:longest,list:full"
@@ -234,10 +235,10 @@ mkdir -p ~/.vim/colors
 mustang_file=$HOME"/.vim/colors/mustang.vim"
 if [ ! -e $mustang_file ];
 then 
-  echo 'installing purty colors'
+  echo 'installing horse'
   curl -Lo- --insecure https://raw.githubusercontent.com/jeraldrich/mustang-vim/master/colors/mustang.vim > $mustang_file
 else
-  echo 'you already got dem pardner'
+  echo 'horse already installed'
 fi
 
 modify_vimrc "let g:rehash256 = 1"
