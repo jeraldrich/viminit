@@ -119,7 +119,7 @@ modify_vimrc "autocmd BufWritePost *.py call Flake8()"
 # just highlight pep8 errors in file, rather than create new window (annoying)
 modify_vimrc  "let g:flake8_show_quickfix=0"
 modify_vimrc  "let g:flake8_show_in_file=1"
-# indentify hidden tab vermin before codebase is completely infested
+# identify hidden tab vermin
 modify_vimrc "set list"
 modify_vimrc "set listchars=tab:>.,trail:.,extends:#,nbsp:."
 # enable ability to press f2 and paste what was copied without smart indent / styling
