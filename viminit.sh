@@ -91,7 +91,7 @@ modify_vimrc "set undolevels=1000"
 # don't beep
 modify_vimrc "set visualbell"
 modify_vimrc "set noerrorbells"
-# enable vim og no backups, swaps, save points, or mercy.
+# enable vim og no backups, swaps, or save points
 modify_vimrc "set nobackup" 
 modify_vimrc "set noswapfile"
 # if your code can't fit in 79 columns, python may not be for you
