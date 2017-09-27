@@ -93,7 +93,7 @@ modify_vimrc "set noerrorbells"
 # enable vim og no backups, swaps, save points, or mercy.
 modify_vimrc "set nobackup" 
 modify_vimrc "set noswapfile"
-# if your code can't fit in 79 columns, python may not be for you
+# if your code can't fit in 79 columns, issue may exist between keyboard and chair
 modify_vimrc "set nowrap"
 # set ignore files
 modify_vimrc "set wildmode=list:longest,list:full"
