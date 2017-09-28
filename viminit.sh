@@ -52,6 +52,8 @@ function modify_vimrc()
   fi
 }
 
+# change \ leader to - since \ is to far away
+let mapleader = "-"
 # modify vimrc to run pathogen on vim startup
 modify_vimrc "execute pathogen#infect()" "prepend"
 # enable additional plugins
@@ -124,10 +126,8 @@ modify_vimrc "set list"
 modify_vimrc "set listchars=tab:>.,trail:.,extends:#,nbsp:."
 # enable ability to press f2 and paste what was copied without smart indent / styling
 modify_vimrc "set pastetoggle=<F2>"
-# skip pressing shift before every command and just do it
-modify_vimrc "nnoremap ; :"
 # clear search buffer highlight when pressing ,/ instead of :nohlsearch
-modify_vimrc "nmap <silent> ,/ :nohlsearch<CR>"
+modify_vimrc "nnoremap <leader>c :nohl<CR>"
 
 
 # smart next line indention detection
