@@ -101,7 +101,7 @@ modify_vimrc "set wildmode=list:longest,list:full"
 modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.swp,*.class,.svn"
 # NERDTree configuration
 modify_vimrc "let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '__pycache__']"
-modify_vimrc "map <Leader>n :NERDTreeTabsToggle<CR>"
+modify_vimrc "map n :NERDTreeTabsToggle<CR>"
 # Easygrep config
 modify_vimrc "let g:EasyGrepRecursive = 1"
 modify_vimrc "let g:EasyGrepFilesToExclude = '*.pyc,*.rbc'"
@@ -124,7 +124,7 @@ modify_vimrc "set list"
 modify_vimrc "set listchars=tab:>.,trail:.,extends:#,nbsp:."
 # enable ability to press f2 and paste what was copied without smart indent / styling
 modify_vimrc "set pastetoggle=<F2>"
-# skip timidly pressing shift before every command and vim with confidence
+# skip pressing shift before every command and just do it
 modify_vimrc "nnoremap ; :"
 # clear search buffer highlight when pressing ,/ instead of :nohlsearch
 modify_vimrc "nmap <silent> ,/ :nohlsearch<CR>"
