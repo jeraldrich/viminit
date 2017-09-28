@@ -1,10 +1,11 @@
 # viminit
-My vim config. This script is dumb, simple, and has no dependencies. Works on linux, freebsd, osx. 
+My vim config. This script is dumb, simple, and has no dependencies. Works on linux, freebsd, osx.
+Designed to work like a gui editor, but without the need to waste time moving hand from keyboard to mouse
 
 ![ScreenShot](https://github.com/jeraldrich/viminit/blob/master/mustang_theme.png)
 
 - standardizes python files to use autoindented pep8 whitespace
-- nerdtree (ctrl+\ shows dir tree)
+- nerdtree (n shows dir tree)
 - nerdcommenter (makes mass commenting / uncommenting easier)
 - vim-surround (siX surrounds word in X)
 - delimitMate (autocomplete parentheses, quotes, ect)
