@@ -53,7 +53,7 @@ function modify_vimrc()
 }
 
 # change \ leader to - since \ is to far away
-let mapleader = "-"
+modify_vimrc 'let mapleader = "-"'
 # modify vimrc to run pathogen on vim startup
 modify_vimrc "execute pathogen#infect()" "prepend"
 # enable additional plugins
