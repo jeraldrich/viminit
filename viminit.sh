@@ -217,7 +217,7 @@ then
   echo 'drinking coffee'
   git clone https://github.com/kchmck/vim-coffee-script.git $coffee_dir
 else
-  echo 'you already drank coffee. tic tac?'
+  echo 'coffee already dranked.'
 fi
 
 # ag fuzzy full project filename and content search faster than ack or grep
