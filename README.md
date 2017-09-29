@@ -1,7 +1,7 @@
 # viminit
 My vim config. This script is dumb, simple, and has no dependencies. Works on linux, freebsd, osx.
 
-Designed to work like a gui editor, but without the need to waste time moving hand from keyboard to mouse
+Designed to work like a gui editor, but without wasting time moving hand from keyboard to mouse
 
 ![ScreenShot](https://github.com/jeraldrich/viminit/blob/master/mustang_theme.png)
 
