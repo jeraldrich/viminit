@@ -217,7 +217,7 @@ then
   echo 'drinking coffee'
   git clone https://github.com/kchmck/vim-coffee-script.git $coffee_dir
 else
-  echo 'coffee already dranked.'
+  echo 'how about a tic tac instead'
 fi
 
 # ag fuzzy full project filename and content search faster than ack or grep
@@ -235,10 +235,10 @@ mkdir -p ~/.vim/colors
 mustang_file=$HOME"/.vim/colors/mustang.vim"
 if [ ! -e $mustang_file ];
 then 
-  echo 'installing horse'
+  echo 'making pretty'
   curl -Lo- --insecure https://raw.githubusercontent.com/jeraldrich/mustang-vim/master/colors/mustang.vim > $mustang_file
 else
-  echo 'horse already installed'
+  echo 'your vim is pretty just the way it is'
 fi
 
 modify_vimrc "let g:rehash256 = 1"
