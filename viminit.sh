@@ -12,8 +12,9 @@ if ! which git > /dev/null; then
 fi
 
 # ask user if they want to fresh install
-read -n1 -p "Remove existing vim config and plugins? [y,n]" choice
-if [[ $choice == "y" || $choice == "Y" ]]; then
+echo "Remove existing vim config and plugins? [y,n]"
+read input
+if [[ $input == "y" ]]; then
   if [ -d $vim_dir ]; then
     rm -rf $vim_dir
     echo $vim_dir" removed"
