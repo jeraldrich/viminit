@@ -12,14 +12,23 @@ if ! which git > /dev/null; then
 fi
 
 # ask user if they want to fresh install
-read -p "Remove existing vim config and plugins (y,n)? " choice
-case "$choice" in
-  y|Y )
-      if [ -d $vim_dir ]; then rm -rf $vim_dir && echo $vim_dir" removed"; fi
-      if [ -f $vim_rc ]; then rm $vim_rc && echo $vim_rc" removed"; fi
-      if [ -f "$vim_info" ]; then rm $vim_info && echo $vim_info" removed"; fi ;;
-  * ) echo "preserving existing vim config and plugins." ;;
-esac
+read -n1 -p "Remove existing vim config and plugins? [y,n]" choice
+if [[ $choice == "y" || $choice == "Y" ]]; then
+  if [ -d $vim_dir ]; then
+    rm -rf $vim_dir
+    echo $vim_dir" removed"
+  fi
+
+  if [ -f $vim_rc ]; then
+    rm $vim_rc
+    echo $vim_rc" removed"
+  fi
+
+  if [ -f "$vim_info" ]; then
+    rm $vim_info
+    echo $vim_info" removed"
+  fi
+fi
 
 # create vim dir if not exists
 if [ ! -d $vim_dir ];
@@ -108,9 +117,9 @@ modify_vimrc "set undolevels=1000"
 modify_vimrc "set visualbell"
 modify_vimrc "set noerrorbells"
 # enable vim og no backups, swaps, or save points
-modify_vimrc "set nobackup" 
+modify_vimrc "set nobackup"
 modify_vimrc "set noswapfile"
-# if your code can't fit in 79 columns, python may not be for you
+# don't word wrap long lines of code
 modify_vimrc "set nowrap"
 # set ignore files
 modify_vimrc "set wildmode=list:longest,list:full"
@@ -125,7 +134,7 @@ modify_vimrc "let g:EasyGrepFilesToExclude = '*.pyc,*.rbc'"
 modify_vimrc "let g:NERDTreeDirArrows=0"
 modify_vimrc "set t_Co=256"
 # show whitespace chars as grey lines
-modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\" 
+modify_vimrc "autocmd filetype python set list listchars=tab:\\|\\"
 # pep8 width, smartindents
 modify_vimrc "au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79"
 # new line after methods, class ect in python (very annoying if not set)
