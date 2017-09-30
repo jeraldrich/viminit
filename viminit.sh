@@ -1,3 +1,5 @@
+#!/bin/bash
+
 vim_dir=$HOME"/.vim"
 pathogen_file=$HOME"/.vim/autoload/pathogen.vim"
 vim_rc=$HOME"/.vimrc"
@@ -9,7 +11,7 @@ if ! which git > /dev/null; then
   exit 0
 fi
 
-# Ask user if they want to fresh install
+# ask user if they want to fresh install
 read -p "Remove existing vim config and plugins (y,n)? " choice
 case "$choice" in
   y|Y ) [ -d "$vim_dir" ] && rm -rf $vim_dir && echo $vim_dir" removed" && [ -f "$vim_rc" ] && rm $vim_rc && echo $vim_rc" removed" && [ -f "$vim_info" ] && rm $vim_info && echo $vim_info" removed" ;;
@@ -17,7 +19,7 @@ case "$choice" in
   * ) ;;
 esac
 
-# make sure .vim directory 
+# create vim dir if not exists
 if [ ! -d $vim_dir ];
 then
   mkdir ~/.vim
