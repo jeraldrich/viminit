@@ -53,7 +53,7 @@ function modify_vimrc()
 }
 
 # change \ leader to - since \ is to far away
-modify_vimrc 'let mapleader = "-"'
+modify_vimrc 'let mapleader = ","'
 # modify vimrc to run pathogen on vim startup
 modify_vimrc "execute pathogen#infect()" "prepend"
 # enable additional plugins
@@ -126,8 +126,12 @@ modify_vimrc "set list"
 modify_vimrc "set listchars=tab:>.,trail:.,extends:#,nbsp:."
 # enable ability to press f2 and paste what was copied without smart indent / styling
 modify_vimrc "set pastetoggle=<F2>"
-# clear search buffer highlight when pressing ,/ instead of :nohlsearch
+# clear search buffer highlight when pressing ,c instead of :nohlsearch
 modify_vimrc "nnoremap <leader>c :nohl<CR>"
+# map redo to shift r
+modify_vimrc "nnoremap <S-r> <c-r>"
+# map escape from insert mode to jk
+modify_vimrc "inoremap jk <Esc>$
 
 
 # smart next line indention detection
@@ -230,7 +234,7 @@ else
   echo 'ag already installed'
 fi
 
-# mustang horsey theme
+# mustang theme
 mkdir -p ~/.vim/colors
 mustang_file=$HOME"/.vim/colors/mustang.vim"
 if [ ! -e $mustang_file ];
