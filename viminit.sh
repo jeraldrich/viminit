@@ -11,24 +11,6 @@ if ! which git > /dev/null; then
   exit 0
 fi
 
-# ask user if they want to fresh install
-echo "Remove existing vim config and plugins? [y,n]"
-read input
-if [ $input == "y" ];
-then
-  if [ -d $vim_dir ];
-  then
-    rm -rf $vim_dir
-    echo $vim_dir" removed"
-  fi
-
-  if [ -e $vim_rc ];
-  then
-    rm $vim_rc
-    echo $vim_rc" removed"
-  fi
-fi
-
 # create vim dir if not exists
 if [ ! -d $vim_dir ];
 then
