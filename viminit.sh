@@ -25,7 +25,7 @@ if [[ $input == "y" ]]; then
     echo $vim_rc" removed"
   fi
 
-  if [ -f "$vim_info" ]; then
+  if [[ -f $vim_info ]]; then
     rm $vim_info
     echo $vim_info" removed"
   fi
