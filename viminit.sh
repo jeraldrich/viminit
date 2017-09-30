@@ -1,5 +1,3 @@
-#!/bin/bash
-
 vim_dir=$HOME"/.vim"
 pathogen_file=$HOME"/.vim/autoload/pathogen.vim"
 vim_rc=$HOME"/.vimrc"
