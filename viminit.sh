@@ -24,11 +24,6 @@ if [[ $input == "y" ]]; then
     rm $vim_rc
     echo $vim_rc" removed"
   fi
-
-  if [ -e $vim_info ]; then
-    rm $vim_info
-    echo $vim_info" removed"
-  fi
 fi
 
 # create vim dir if not exists
