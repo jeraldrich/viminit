@@ -1,37 +1,47 @@
-# make sure .vim directory exists
 vim_dir=$HOME"/.vim"
-if [ ! -d $vim_dir ];
-then
-  echo $vim_dir" does not exist. Creating .vim directory..."
-  mkdir ~/.vim
-fi
+pathogen_file=$HOME"/.vim/autoload/pathogen.vim"
+vim_rc=$HOME"/.vimrc"
+vim_info=$HOME"/.viminfo"
+
 # make sure git is installed
 if ! which git > /dev/null; then
   echo 'git must be installed.'
   exit 0
 fi
 
+# Ask user if they want to fresh install
+read -p "Remove existing vim config and plugins (y,n)? " choice
+case "$choice" in
+  y|Y ) [ -d "$vim_dir" ] && rm -rf $vim_dir && echo $vim_dir" removed" && [ -f "$vim_rc" ] && rm $vim_rc && echo $vim_rc" removed" && [ -f "$vim_info" ] && rm $vim_info && echo $vim_info" removed" ;;
+  n|N ) ;;
+  * ) ;;
+esac
+
+# make sure .vim directory 
+if [ ! -d $vim_dir ];
+then
+  mkdir ~/.vim
+fi
+
 # install pathogen
 mkdir -p ~/.vim/autoload
 mkdir -p ~/.vim/bundle
 mkdir -p ~/.vim/colors
-pathogen_file=$HOME"/.vim/autoload/pathogen.vim"
 if [ ! -e $pathogen_file ];
-then 
-  echo 'installing pathogen'
+then
+  echo 'Installing pathogen...'
   curl -Lo- --insecure https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim > $pathogen_file
 else
-  echo 'Pathogen already installed'
+  echo 'Pathogen already installed.'
 fi
 
 function modify_vimrc()
 {
-  vimrc_file=$HOME"/.vimrc"
-  if [ ! -f $vimrc_file ];
+  if [ ! -f $vim_rc ];
   then
-    touch $vimrc_file
+    touch $vim_rc
   fi
-  if ! grep -qFx "$1" $vimrc_file;
+  if ! grep -qFx "$1" $vim_rc;
   then
     # creating a tmp file is necessary in order to prepend to .vimrc
     # without using sed or ed, which both function differently between 
@@ -41,18 +51,18 @@ function modify_vimrc()
     then
       echo "prepending "$1" to .vimrc"
       echo "$1" > $tmp_file
-      cat $vimrc_file >> $tmp_file
-      mv $tmp_file $vimrc_file
+      cat $vim_rc >> $tmp_file
+      mv $tmp_file $vim_rc
     else
       echo "appending "$1" to .vimrc"
       echo "$1" > $tmp_file
-      cat $tmp_file >> $vimrc_file
+      cat $tmp_file >> $vim_rc
       rm $tmp_file
     fi
   fi
 }
 
-# change \ leader to - since \ is to far away
+# change default \ to ,
 modify_vimrc 'let mapleader = ","'
 # modify vimrc to run pathogen on vim startup
 modify_vimrc "execute pathogen#infect()" "prepend"
@@ -139,18 +149,18 @@ mkdir -p ~/.vim/indent
 python_indent_file=$HOME"/.vim/indent/python.vim"
 if [ ! -e $python_indent_file ];
 then 
-  echo 'Installing Python indent file'
+  echo 'Installing Python indent...'
   curl "https://vim.sourceforge.io/scripts/download_script.php?src_id=4316" \
         > $HOME"/.vim/indent/python.vim"
 else
-  echo 'Python indent file already installed'
+  echo 'Python indent already installed.'
 fi
 
 ## install pathogen plugins ##
 bundle_dir=$HOME"/.vim/bundle"
 if [ ! -d $bundle_dir ];
 then
-  echo $bundle_dir" does not exist. Pathogen has failed to install."
+  echo $bundle_dir" does not exist. Pathogen has failed to install!"
   exit 0
 fi
 
@@ -158,80 +168,80 @@ fi
 nerdtree_dir=$HOME"/.vim/bundle/nerdtree"
 if [ ! -d $nerdtree_dir ];
 then
-  echo $nerdtree_dir" does not exist. Installing..."
+  echo "Installing NERDTree..."
   git clone https://github.com/scrooloose/nerdtree.git $nerdtree_dir
 else
-  echo $nerdtree_dir" already exists."
+  echo "NERDTree already installed."
 fi
 
 # install NERDcommenter. Makes mass comment changes much easier
 nerdcommenter_dir=$HOME"/.vim/bundle/nerdcommenter_dir"
 if [ ! -d $nerdcommenter_dir ];
 then
-  echo $nerdcommenter_dir" does not exist. Installing..."
+  echo "Installing NERDcommenter..."
   git clone https://github.com/scrooloose/nerdcommenter.git $nerdcommenter_dir
 else
-  echo $nerdcommenter_dir" already exists."
+  echo "NERDcommenter already installed."
 fi
 
 # install vim-surround
 vimsurround_dir=$HOME"/.vim/bundle/vim-surround"
 if [ ! -d $vimsurround_dir ];
 then
-  echo $vimsurround_dir" does not exist. Installing..."
+  echo "Installing vim-surround..."
   git clone git://github.com/tpope/vim-surround.git $vimsurround_dir
 else
-  echo $vimsurround_dir" already exists."
+  echo "vim-surround already installed."
 fi
 
 # install delimitMate (autoclose brackets, quotes, ect)
 delimitMate_dir=$HOME"/.vim/bundle/delimitMate"
 if [ ! -d $delimitMate_dir ];
 then
-  echo $delimitMate_dir" does not exist. Installing..."
+  echo "Installing delimitMate..."
   git clone git://github.com/Raimondi/delimitMate.git $delimitMate_dir
 else
-  echo $delimitMate_dir" already exists."
+  echo "delimitMate already installed."
 fi
 
 # install ctrlp
 ctrlp_dir=$HOME"/.vim/bundle/ctrlp"
 if [ ! -d $ctrlp_dir ];
 then
-  echo $ctrlp_dir" does not exist. Installing..."
+  echo "Installing ctrlp..."
   git clone https://github.com/kien/ctrlp.vim.git $ctrlp_dir
 else
-  echo $ctrlp_dir" already exists."
+  echo "ctrlp already installed."
 fi
 
 # install vim-flake8
 vimflake8_dir=$HOME"/.vim/bundle/vim-flake8"
 if [ ! -d $vimflake8_dir ];
 then
-  echo $vimflake8_dir" does not exist. Installing..."
+  echo "Installing flake8..."
   git clone https://github.com/nvie/vim-flake8.git $vimflake8_dir
 else
-  echo $vimflake8_dir" already exists."
+  echo "flake8 already installed."
 fi
 
 # coffeescript syntax highlighter, compile js tester
 coffee_dir=$HOME"/.vim/bundle/vim-coffee-script"
 if [ ! -d $coffee_dir ];
 then 
-  echo 'drinking coffee'
+  echo "Installing vim-coffeescript..."
   git clone https://github.com/kchmck/vim-coffee-script.git $coffee_dir
 else
-  echo 'how about a tic tac instead'
+  echo 'vim-coffeescript already installed.'
 fi
 
 # ag fuzzy full project filename and content search faster than ack or grep
 ag_dir=$HOME"/.vim/bundle/ag"
 if [ ! -d $ag_dir ];
 then 
-  echo 'installing ag'
+  echo 'Installing ag...'
   git clone https://github.com/rking/ag.vim $ag_dir
 else
-  echo 'ag already installed'
+  echo 'ag already installed.'
 fi
 
 # mustang theme
@@ -239,10 +249,10 @@ mkdir -p ~/.vim/colors
 mustang_file=$HOME"/.vim/colors/mustang.vim"
 if [ ! -e $mustang_file ];
 then 
-  echo 'making pretty'
+  echo 'Installing mustang theme...'
   curl -Lo- --insecure https://raw.githubusercontent.com/jeraldrich/mustang-vim/master/colors/mustang.vim > $mustang_file
 else
-  echo 'your vim is pretty just the way it is'
+  echo 'mustang theme already installed.'
 fi
 
 modify_vimrc "let g:rehash256 = 1"
