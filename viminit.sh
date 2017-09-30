@@ -131,7 +131,7 @@ modify_vimrc "nnoremap <leader>c :nohl<CR>"
 # map redo to shift r
 modify_vimrc "nnoremap <S-r> <c-r>"
 # map escape from insert mode to jk
-modify_vimrc "inoremap jk <Esc>$
+modify_vimrc "inoremap jk <Esc>"
 
 
 # smart next line indention detection
