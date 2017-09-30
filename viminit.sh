@@ -14,7 +14,7 @@ fi
 # ask user if they want to fresh install
 read -p "Remove existing vim config and plugins (y,n)? " choice
 case "$choice" in
-  y|Y ) [ -d "$vim_dir" ] && rm -rf $vim_dir && echo $vim_dir" removed" && [ -f "$vim_rc" ] && rm $vim_rc && echo $vim_rc" removed" && [ -f "$vim_info" ] && rm $vim_info && echo $vim_info" removed" ;;
+  y|Y ) [ -d "$vim_dir" ] && rm -rf $vim_dir && echo $vim_dir" removed"; [ -f "$vim_rc" ] && rm $vim_rc && echo $vim_rc" removed"; [ -f "$vim_info" ] && rm $vim_info && echo $vim_info" removed";;
   * ) echo "preserving existing vim config and plugins." ;;
 esac
 
