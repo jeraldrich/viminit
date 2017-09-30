@@ -1,7 +1,7 @@
 # viminit
 My vim config. This script is dumb, simple, and has no dependencies. Works on linux, freebsd, osx.
 
-Designed to work like a gui editor, but without wasting time moving hand from keyboard to mouse
+Designed to work like atom/sublime using only keyboard.
 
 ![ScreenShot](https://github.com/jeraldrich/viminit/blob/master/mustang_theme.png)
 
@@ -18,6 +18,6 @@ Designed to work like a gui editor, but without wasting time moving hand from ke
 
 ## Installation
 ```bash
-$ curl -Lo- --insecure https://raw.github.com/jeraldrich/viminit/master/viminit.sh | bash
+curl -s -L https://raw.github.com/jeraldrich/viminit/master/viminit.sh | bash
 ```
 
