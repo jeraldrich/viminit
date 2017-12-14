@@ -1,5 +1,5 @@
 # viminit
-My vim config. This script is dumb, simple, and has no dependencies. Works on linux, freebsd, osx.
+My vim config. This script is dumb, simple, and has no dependencies (no rubygems). Works on linux, freebsd, osx.
 
 Designed to work like atom/sublime using only keyboard.
 
