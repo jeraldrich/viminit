@@ -102,7 +102,7 @@ modify_vimrc "set noswapfile"
 modify_vimrc "set nowrap"
 # set ignore files
 modify_vimrc "set wildmode=list:longest,list:full"
-modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.swp,*.class,.svn"
+modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.swp,*.class,.svn,*/tmp/*,*.so,*.swp,*.zip,*\\tmp\\*,*.swp,*.zip,*.exe"
 # NERDTree configuration
 modify_vimrc "let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '__pycache__']"
 modify_vimrc "map n :NERDTreeToggle<CR>"
@@ -201,7 +201,7 @@ ctrlp_dir=$HOME"/.vim/bundle/ctrlp"
 if [ ! -d $ctrlp_dir ];
 then
   echo "Installing ctrlp..."
-  git clone https://github.com/kien/ctrlp.vim.git $ctrlp_dir
+  git clone https://github.com/ctrlpvim/ctrlp.vim.git $ctrlp_dir
 else
   echo "ctrlp already installed."
 fi
