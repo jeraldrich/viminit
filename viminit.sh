@@ -103,6 +103,7 @@ modify_vimrc "set nowrap"
 # set ignore files
 modify_vimrc "set wildmode=list:longest,list:full"
 modify_vimrc "set wildignore+=*.o,*.obj,.git,*.rbc,*.swp,*.class,.svn,*/tmp/*,*.so,*.swp,*.zip,*\\tmp\\*,*.swp,*.zip,*.exe"
+modify_vimrc "let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']"
 # NERDTree configuration
 modify_vimrc "let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '__pycache__']"
 modify_vimrc "map n :NERDTreeToggle<CR>"
