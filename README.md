@@ -12,7 +12,6 @@ Designed to work like visualstudio using only keyboard.
 - ctrlp (fuzzy file finder in open dir and children dir similair to visualstudio find)
 - vim-flake8 (auto highlight pep8 style guide errors as you code)
 
-
 </br>
 
 ![ScreenShot](https://github.com/jeraldrich/viminit/blob/master/mustang_theme.png)
