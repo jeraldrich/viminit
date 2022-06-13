@@ -3,8 +3,6 @@ My vim config. This script is dumb, simple, and has no dependencies (no rubygems
 
 Designed to work like visualstudio using only keyboard.
 
-![ScreenShot](https://github.com/jeraldrich/viminit/blob/master/mustang_theme.png)
-
 - cool underground vim theme - mustang
 - standardizes python files to use autoindented pep8 whitespace
 - nerdtree (n shows dir tree)
@@ -13,6 +11,8 @@ Designed to work like visualstudio using only keyboard.
 - delimitMate (autocomplete parentheses, quotes, ect)
 - ctrlp (fuzzy file finder in open dir and children dir similair to visualstudio find)
 - vim-flake8 (auto highlight pep8 style guide errors as you code)
+
+![ScreenShot](https://github.com/jeraldrich/viminit/blob/master/mustang_theme.png)
 
 ## Installation
 ```bash
