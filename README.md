@@ -13,6 +13,8 @@ Designed to work like visualstudio using only keyboard.
 - vim-flake8 (auto highlight pep8 style guide errors as you code)
 
 
+</br>
+
 ![ScreenShot](https://github.com/jeraldrich/viminit/blob/master/mustang_theme.png)
 
 ## Installation
